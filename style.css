@@ -1,0 +1,114 @@
+:root{
+    --background-color: rgba(255,255,255,0.3);
+    --dark-background-color: #454545;
+    --text-color: #fffeee;
+    --alive-color: rgb(192, 243, 116);
+    --dead-color: #ff5d48;
+    --restart-color: #4dd5ff;
+    --random-color: #ffd4b0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--dark-background-color);
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    color: var(--alive-color);
+    margin: 1rem;
+    text-transform: uppercase;
+}
+
+.world-status{
+    display: flex;
+}
+
+.alive-count,.stopwatch{
+    color: var(--random-color);
+}
+
+#world{
+    padding-bottom: 10px;
+}
+
+table{
+    background-color: var(--dark-background-color);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6),2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+td{
+    border: 0.2px solid rgba(0, 0, 0, 0.3);
+    background-color: var(--background-color);
+    backdrop-filter: blur(1rem);
+    width: 15px;
+    height: 15px;
+    /* transition: all 0.1s linear; */
+}
+
+td:hover{
+    background-color: var(--alive-color);
+}
+
+td.alive{
+    background-color: var(--alive-color);
+}
+
+.btn-group{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn{
+    outline: none;
+    margin: 1rem;
+    border: 0.5px solid var(--alive-color);
+    border-radius: 4rem;
+    color: var(--alive-color);
+    padding: 1.5rem;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 10px #252222;
+    font-weight: 700;
+    background-color: transparent;
+    backdrop-filter: blur(2rem);
+    cursor: pointer;
+    transition: border-radius 1s ease;
+}
+
+.btn:hover{
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+
+.start-btn:hover{
+    border: 0.5px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.stop-btn:hover{
+    border: 0.5px solid var(--dead-color);
+    color: var(--dead-color);
+}
+
+.reset-btn:hover{
+    border: 0.5px solid var(--restart-color);
+    color: var(--restart-color);
+}
+
+
+
+.random-btn:hover{
+    border: 0.5px solid var(--random-color);
+    color: var(--random-color);
+}

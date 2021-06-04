@@ -6,14 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conway's Game Of Life</title>
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==' crossorigin='anonymous'/>
 </head>
 <body>
-    <canvas style="background-color: black;"></canvas>
-    <div>
-        <button id="start-btn">start</button>
-        <button id="stop-btn">stop</button>
-        <button id="reset-btn">reset</button>
+    <h1 class="title">Conway's Game Of Life</h1>
+    <div class="world-status">
+        <h3 class="title">Alive : <span class="alive-count">0</span></h3>
+        <h3 class="title">Simulation Time: <span class="stopwatch">00:00:00</span></h3>
     </div>
-    <script src="main.js"></script>
+
+    <!-- we are not using canvas here -->
+    <!-- we are building the grid for the world using js -->
+    <!-- grid will be a table built using js -->
+    <!-- each row will have same no of columns -->
+    <div id="world">
+        <!-- <table id="worldgrid">
+            tr*40>td*40
+        </table> -->
+    </div>
+    <div class="btn-group">
+        <button class="btn start-btn" id="startStopBtn"> <span><i class="fa fa-play"></i></span> Start Simulation</button>
+        <button class="btn reset-btn"><span><i class="fas fa-redo-alt"></i></span> Reset</button>
+        <button class="btn random-btn"><span><i class="fas fa-question"></i></span> Generate Randomly</button>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
