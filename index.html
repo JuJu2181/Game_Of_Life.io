@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conway's Game Of Life</title>
     <link rel="stylesheet" href="style.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==' crossorigin='anonymous'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'
+        integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=='
+        crossorigin='anonymous' />
 </head>
+
 <body>
+    <!-- creating a modal -->
+    <div id="modalBox" class="modal">
+        <!-- mPopup content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="title">Conway's Game Of Life</h3>
+                <span class="close-btn fas fa-times"></span>
+            </div>
+            <div class="modal-body">
+                <ul class="list">
+                    <li>Conway's Game Of Life is a Cellular Automation devised by British Mathematician John Horton Conway</li>
+                    <li>Rules For Game:
+                        <ul class="sub-list">
+                            <li>Any live cell with less than two live neighbors will die due to underpopulation</li>
+                            <li>Any live cell with more than three live neighbors will die due to overpopulation</li>
+                            <li>Any live cell with two or three live neighbors will live to next generation</li>
+                            <li>Any dead cell with exactly three live neighbors will become alive in next generation by reproduction</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3 class="title">How to play ?</h3>
+                <ul class="list">
+                    <li>You can toggle the life of each cell by clicking on the cell. Green means alive</li>
+                    <li>Before starting simulation atleast one cell should be alive. But if many cells are alive you will get better simulation. To start simulation press start simualtion</li>
+                    <li>Once simulation starts, you can stop simulation process by clicking stop simulation</li>
+                    <li>Reset will reset the game</li>
+                    <li>You can also use generate randomly to generate random cells</li>
+                </ul>
+            </div>
+            <div class="modal-footer" id="modal-footer"></div>
+        </div>
+    </div>
+
     <h1 class="title">Conway's Game Of Life</h1>
     <div class="world-status">
         <h3 class="title">Alive : <span class="alive-count">0</span></h3>
@@ -25,10 +62,17 @@
         </table> -->
     </div>
     <div class="btn-group">
-        <button class="btn start-btn" id="startStopBtn"> <span><i class="fa fa-play"></i></span> Start Simulation</button>
+        <button class="btn start-btn" id="startStopBtn"> <span><i class="fa fa-play"></i></span> Start
+            Simulation</button>
         <button class="btn reset-btn"><span><i class="fas fa-redo-alt"></i></span> Reset</button>
         <button class="btn random-btn"><span><i class="fas fa-question"></i></span> Generate Randomly</button>
     </div>
+    <div class="social-btn-group">
+        <a href="https://twitter.com/anish_shilpakar" class="social-btn fab fa-twitter"></a>
+        <a href="https://github.com/JuJu2181/Game_Of_Life.io" class="social-btn fab fa-github"></a>
+        <i class="social-btn fas fa-question-circle" id="modal-popup-btn"></i>
+    </div>
     <script src="app.js"></script>
 </body>
+
 </html>
