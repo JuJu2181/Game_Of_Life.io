@@ -63,7 +63,7 @@ td {
 }
 
 td:hover {
-    background-color: var(--alive-color);
+    background-color: rgb(255, 239, 170);
 }
 
 td.alive {
