@@ -2,6 +2,9 @@
 - This JS project is going to be a simple simulation of Conway's Game Of Life 
 - I will be implementing it using HTML, CSS and Vanilla JS 
 
+#Live Link:
+Check it out live here: (Conway's Game of Life)[https://juju2181.github.io/Game_Of_Life.io/]
+
 # What is Conway's Game Of Life 
 - Conway's Game Of Life is a cellular automation devised by British mathematican John Horton Conway.
 - It is zero player game, meaning that it needs a single input to trigger the start of game and then it requires no further input
